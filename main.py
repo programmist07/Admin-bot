@@ -2,8 +2,8 @@ from telegram import Update, ReplyKeyboardMarkup, InlineKeyboardButton, InlineKe
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes, MessageHandler, CallbackQueryHandler, filters
 
 
-ADMIN_ID = 6393985738
-CHANNEL_ID = 1001982218162
+ADMIN_ID = ("number")
+CHANNEL_ID = ("number")
 
 USER_DATA_FILE = 'user_data.txt'
 
@@ -40,7 +40,7 @@ async def inline_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
 async def message_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text("I received your message!")
 
-app = ApplicationBuilder().token("7917525682:AAHk2CKko-DivSH1RoouYtUKusAzTtfEmyg").build()
+app = ApplicationBuilder().token("Token here").build()
 
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CommandHandler("admin", admin))
